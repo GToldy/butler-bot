@@ -1,3 +1,5 @@
+const keepAlive = require("./server")
+
 const Discord = require('discord.js')
 const { Intents } = require('discord.js')
 const dotenv = require('dotenv')
@@ -18,4 +20,5 @@ client.once('ready', () => {
 
 client.on('messageCreate', messageHandler);
 
+keepAlive()
 client.login(process.env.DISCORD_TOKEN);
